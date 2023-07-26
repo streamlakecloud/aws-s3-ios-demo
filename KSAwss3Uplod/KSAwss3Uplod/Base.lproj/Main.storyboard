@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PtE-gh-ESr">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y98-W0-bne">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="678"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="eUz-7A-fwQ">
+                                                <rect key="frame" x="32" y="32" width="329" height="614"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKJ-do-6Vv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="40"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="qon-AE-i95"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="请求上传"/>
+                                                        <connections>
+                                                            <action selector="applyUploadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A3C-nb-ny8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KrQ-Ps-uzt">
+                                                        <rect key="frame" x="0.0" y="56" width="329" height="20"/>
+                                                    </activityIndicatorView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uAe-w5-Zlt">
+                                                        <rect key="frame" x="0.0" y="92" width="329" height="128"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="EoJ-Ju-B6B"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5I-pF-KSY">
+                                                        <rect key="frame" x="0.0" y="236" width="329" height="40"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="00X-NW-8ov"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="上传文件"/>
+                                                        <connections>
+                                                            <action selector="uploadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bCs-6y-Bif"/>
+                                                        </connections>
+                                                    </button>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="1g6-3B-48q">
+                                                        <rect key="frame" x="0.0" y="292" width="329" height="20"/>
+                                                    </activityIndicatorView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rmk-c5-DMN">
+                                                        <rect key="frame" x="0.0" y="328" width="329" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="wDf-t4-Ydr"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gh5-2B-WiG">
+                                                        <rect key="frame" x="0.0" y="394" width="329" height="40"/>
+                                                        <color key="backgroundColor" name="AccentColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="duV-qs-pia"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="确认上传"/>
+                                                        <connections>
+                                                            <action selector="confirmUploadButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jv3-3B-Yee"/>
+                                                        </connections>
+                                                    </button>
+                                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="KJN-qu-Zdz">
+                                                        <rect key="frame" x="0.0" y="450" width="329" height="20"/>
+                                                    </activityIndicatorView>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gjn-BF-pH7">
+                                                        <rect key="frame" x="0.0" y="486" width="329" height="128"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="wXi-E0-5Hk"/>
+                                                        </constraints>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="eUz-7A-fwQ" secondAttribute="trailing" constant="32" id="d3p-pH-DhB"/>
+                                            <constraint firstItem="eUz-7A-fwQ" firstAttribute="leading" secondItem="Y98-W0-bne" secondAttribute="leading" constant="32" id="iXk-jO-HJh"/>
+                                            <constraint firstAttribute="bottom" secondItem="eUz-7A-fwQ" secondAttribute="bottom" constant="32" id="iev-EI-veG"/>
+                                            <constraint firstItem="eUz-7A-fwQ" firstAttribute="top" secondItem="Y98-W0-bne" secondAttribute="top" constant="32" id="pl5-I1-cH3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Y98-W0-bne" secondAttribute="trailing" id="Jce-8B-Z5O"/>
+                                    <constraint firstItem="Y98-W0-bne" firstAttribute="top" secondItem="PtE-gh-ESr" secondAttribute="top" id="TfK-F4-MwX"/>
+                                    <constraint firstItem="Y98-W0-bne" firstAttribute="width" secondItem="PtE-gh-ESr" secondAttribute="width" id="afl-5m-ips"/>
+                                    <constraint firstItem="Y98-W0-bne" firstAttribute="leading" secondItem="PtE-gh-ESr" secondAttribute="leading" id="eLx-T7-NvC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y98-W0-bne" secondAttribute="bottom" id="wjk-t2-UGQ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PtE-gh-ESr" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2fX-Wg-mPr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PtE-gh-ESr" secondAttribute="bottom" id="mRO-1X-KSG"/>
+                            <constraint firstItem="PtE-gh-ESr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tcI-Va-yr8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PtE-gh-ESr" secondAttribute="trailing" id="ual-kJ-17h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appluUploadTextView" destination="uAe-w5-Zlt" id="Kc0-hg-Lsf"/>
+                        <outlet property="applyUploadButton" destination="sKJ-do-6Vv" id="SGE-cH-sEC"/>
+                        <outlet property="applyUploadIndicatorView" destination="KrQ-Ps-uzt" id="mZ2-Th-0a4"/>
+                        <outlet property="confirmUploadButton" destination="Gh5-2B-WiG" id="so2-UA-qJB"/>
+                        <outlet property="confirmUploadIndicatorView" destination="KJN-qu-Zdz" id="bQx-bW-lfK"/>
+                        <outlet property="confirmUploadTextView" destination="Gjn-BF-pH7" id="ayq-8f-XTe"/>
+                        <outlet property="uploadButtton" destination="P5I-pF-KSY" id="hXw-P7-NT1"/>
+                        <outlet property="uploadIndicatorView" destination="1g6-3B-48q" id="pmn-ZQ-DVr"/>
+                        <outlet property="uploadTextView" destination="rmk-c5-DMN" id="gl5-eb-Jsg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
