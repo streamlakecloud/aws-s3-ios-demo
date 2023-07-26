@@ -1,0 +1,55 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - AWSCore (2.28.0)
+  - AWSS3 (2.28.0):
+    - AWSCore (= 2.28.0)
+  - MJExtension (3.4.1)
+
+DEPENDENCIES:
+  - AFNetworking
+  - "AWSCore (from `git@github.com:streamlakecloud/aws-s3-ios.git`)"
+  - "AWSS3 (from `git@github.com:streamlakecloud/aws-s3-ios.git`)"
+  - MJExtension
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - MJExtension
+
+EXTERNAL SOURCES:
+  AWSCore:
+    :git: "git@github.com:streamlakecloud/aws-s3-ios.git"
+  AWSS3:
+    :git: "git@github.com:streamlakecloud/aws-s3-ios.git"
+
+CHECKOUT OPTIONS:
+  AWSCore:
+    :commit: f3fd074ca93bc7bcbec98f90918d0384544e86a7
+    :git: "git@github.com:streamlakecloud/aws-s3-ios.git"
+  AWSS3:
+    :commit: f3fd074ca93bc7bcbec98f90918d0384544e86a7
+    :git: "git@github.com:streamlakecloud/aws-s3-ios.git"
+
+SPEC CHECKSUMS:
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  AWSCore: 0ebe9ba8a459893cdf268ce0bae61875efd0182b
+  AWSS3: 40a2bed039c432e580f1d4b4f740ca80f0610a9e
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
+
+PODFILE CHECKSUM: 8d7a8c2ae9c6cde3162734e4b8f15958c936417e
+
+COCOAPODS: 1.12.1
