@@ -2,11 +2,11 @@
 本项目是一个示例实现， 使用aws-sdk-ios，实现客户端上传到兼容 Amazon Web Services (AWS) 的 Simple Storage Service (S3)协议的StreamLake媒体存储功能.
 
 ## Getting started
-但是由于StreamLake的存储协议与aws有稍许差异，所以对aws-sdk-ios的库做了少许修改。请使用（https://git.corp.kuaishou.com/streamlake/client-sdk/s3） 版本
+但是由于StreamLake的存储协议与aws有稍许差异，所以对aws-sdk-ios的库做了少许修改。请使用（https://github.com/streamlakecloud/aws-s3-ios） 版本
 引入方式：
 ```groovy
-pod 'AWSCore', :git=>'git@git.corp.kuaishou.com:streamlake/client-sdk/s3.git', :branch=>'develop'
-pod 'AWSS3', :git=>'git@git.corp.kuaishou.com:streamlake/client-sdk/s3.git', :branch=>'develop'
+pod 'AWSCore', :git=>'git@github.com:streamlakecloud/aws-s3-ios.git'
+pod 'AWSS3', :git=>'git@github.com:streamlakecloud/aws-s3-ios.git'
 ```
 
 ## 接口签名
@@ -15,7 +15,7 @@ pod 'AWSS3', :git=>'git@git.corp.kuaishou.com:streamlake/client-sdk/s3.git', :br
 
 ## 上传步骤
 使用aws-sdk-iOS上传到StreamLake媒体存储，主要分为三步串行
-代码示例参考[PreviewController](./KSAwss3Uplod/KSAwss3Uplod/ViewController.m)
+代码示例参考[ViewController](./KSAwss3Uplod/KSAwss3Uplod/ViewController.m)
 
 ### 申请上传
 调用ApplyUploadInfo接口，curl描述如下，其中AccessKey为StreamLake颁发的用户唯一身份凭证
@@ -80,7 +80,7 @@ curl --location 'vod.streamlakeapi.com/?Action=ApplyUploadInfo' \
 ```
 
 ### 开始上传
-拿到上传凭证后，调用aws-android-sdk-s3开始上传
+拿到上传凭证后，调用aws-iOS-sdk-s3开始上传
 
 ```Objective-C
 AWSEndpoint *endPoint = [[AWSEndpoint alloc] initWithRegion:AWSRegionCNNorth1 service:AWSServiceS3 URL:[NSURL URLWithString:[NSString stringWithFormat:@"https://%@", applyUploadResult.ResponseData.UploadAddress.UploadEndpoint]]];
@@ -113,8 +113,7 @@ __weak typeof(self) weakSelf = self;
 
 ### 确认上传
 上传完成后，调用确认上传CommitUpload接口，curl描述如下
-
-代码示例参考 [UploadApiService.kt](./app/src/main/java/com/kwai/upload/demo/network/UploadApiService.kt)
+代码示例参考[ViewController](./KSAwss3Uplod/KSAwss3Uplod/ViewController.m)
 ```bash
 curl --location 'vod.streamlakeapi.com/?Action=CommitUpload' \
 --header 'AccessKey: ${access_key}' \
